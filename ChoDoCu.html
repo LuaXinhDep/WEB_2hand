@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="css/cdc.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+
+</head>
+
+<body>
+  <nav >
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+      <i class="fas fa-bars"></i>
+    </label>
+    <label class="logo">CHODOCU</label>
+    <ul class="nav_link" style="z-index:1">
+      <li><a href="#">QUẦN ÁO</a></li>
+      <li><a href="#">PHỤ KIỆN</a></li>
+      <li><a href="#">TÚI XÁCH</a></li>
+      <li><a href="#">GIÀY DÉP</a></li>
+      <li class="search-div">
+        <div class="search_bar">
+          <i class="fa fa-search"></i>
+          <input type="text" placeholder="Tìm kiếm..." />
+        </div>
+      </li>
+
+      <li>
+        <button class="login-btn">LOGIN</button>
+      </li>
+      <li>
+        <a href="#"><i class="fas fa-shopping-bag"></i></a>
+      </li>
+      <li>
+        <a href="#"><i class="fas fa-heart"></i></a>
+      </li>
+    </ul>
+  </nav>
+  <div class="banner" style="width: 100%; height: 100%">
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <img src="/image/slide4.jfif" style="width:100%">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="/image/slide2.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides fade ">
+        <img src="/image/slide3.jpg" style="width:100%">
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+
+
+  </div>
+  <br />
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slides[slideIndex - 1].style.display = "block";
+    }
+  </script>
+  <div class="grid-container">
+    <div class="grid-item">
+      <div class="cir" style="background-image: url(/image/item1.png)"></div>
+      <h3>Phần trên</h3>
+    </div>
+    <div class="grid-item">
+      <div class="cir" style="background-image: url(/image/item2.jfif)"></div>
+      <h3>Quần - Váy</h3>
+    </div>
+    <div class="grid-item">
+      <div class="cir" style="background-image: url(/image/item3.jpg)"></div>
+      <h3>Phụ kiện</h3>
+    </div>
+    <div class="grid-item">
+      <div class="cir" style="background-image: url(/image/item44.jfif)"></div>
+      <h3>Giày</h3>
+    </div>
+    <div class="grid-item">
+      <div class="cir" style="background-image: url(/image/item5.jpg)"></div>
+      <h3>Túi xách</h3>
+    </div>
+  </div>
+  </div>
+  <section style="
+      margin: auto;
+      width: 90vw;
+      height: 100%;
+    ">
+    <div class="grid-container-2">
+      <div class="item1">
+        <p style="font-size: 20px; color: white; font-style: italic">
+          Consequuntur magni dolores uam est, qui dolorem ipsum, consectetur,
+          adipisci velit, sed quia non numquam.
+        </p>
+      </div>
+      <div class="item2">
+        <h4>Thanh lịch</h4>
+        <p>
+          Consequuntur magni dolores uam est, qui dolorem ipsum quia dolor sit
+          amet,magni dolores uam est
+        </p>
+        <a href="#" class="btnMore">Xem thêm</a>
+      </div>
+      <div class="item3">
+        <h4>Giá cả</h4>
+        <p>
+          Đến với CHODOCU cùng săn những món hàng hiếm, cổ điển với giá cả hợp lí.
+          Làm mới tủ đồ lẫn phong cách của bạn cùng CHODOCU.
+        </p>
+        <a href="#" class="btnMore">Xem thêm</a>
+      </div>
+      <div class="item4">
+        <h4>Ứng dụng</h4>
+        <p>
+          Consequuntur magni dolores uam est, qui dolorem ipsum quia dolor sit
+          amet,magni dolores uam est
+        </p>
+        <a href="#" class="btnMore">Xem thêm</a>
+      </div>
+    </div>
+  </section>
+</body>
