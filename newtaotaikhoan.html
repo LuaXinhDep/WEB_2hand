@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+    <title>CHODOCU</title>
+    <link rel="stylesheet" href="taotaikhoan.css">
+  </head>
+
+<body>
+
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='block'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content" action="/action_page.php">
+    <div class="container">
+      <h1>TẠO TÀI KHOẢN</h1>
+      <p>Vui lòng điền vào biểu mẫu này để tạo tài khoản.</p>
+      <hr>
+
+      <label for="text"><b>Tên đăng nhập</b></label>
+      <div>
+      <input type="text" placeholder="Nhập tên" name="text" required>
+      </div>
+      <label for="email"><b>Email/Số điện thoại</b></label>
+      <div>
+      <input type="text" placeholder="Nhập địa chỉ Email/Số điện thoại" name="email" required>
+      </div>
+      <label for="psw"><b>Mật khẩu</b></label>
+      <div>
+      <input type="password" placeholder="Nhập mật khẩu" name="psw" required>
+      </div>
+      <label for="psw-repeat"><b>Xác nhận mật khẩu</b></label>
+      <div>
+      <input type="password" placeholder="Nhập lại mật khẩu" name="psw-repeat" required>
+      </div>
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Nhớ đăng nhập
+      </label>
+
+      <p>Vui lòng xác nhận lại bạn đã đọc và chấp nhận với <a href="#" style="color:dodgerblue">Điều khoản và Điều kiện</a>.</p>
+
+      <div class="clearfix">
+        
+        <button type="submit" class="signupbtn">Đăng ký</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
