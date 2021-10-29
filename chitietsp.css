@@ -1,0 +1,93 @@
+body{ font-family: Arial;}
+* {box-sizing: border-box}
+div.gallery {
+  margin: 5px;
+  float: left;
+  height: auto;
+  background-size: 70%;
+}
+section {
+  margin: 3px;
+  padding: 0px;
+  border: 1px ;
+}
+form{
+  float: right;
+  height:30px ;
+  margin-right: 10px;
+  margin-top:0px;
+}
+
+div.gallery img {
+  display: block;
+      width: 50%;
+      height: auto;
+}
+
+div.desc {
+  display: block;
+  padding: 15px;
+  text-align: center;
+}
+
+#grad1 {
+  height: 4px;
+  width: 
+  60%;
+}
+.bt {
+  
+  border: 12px;
+  color:black;
+  padding: 14px 28px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.bt:hover{
+  opacity: 1;
+}
+
+.them {
+  background-color:  rgb(247, 204, 162);
+  border-radius: 22px;
+  border: 2px solid #000000;
+  margin: 10px 30px;
+}
+.them:hover {
+  background-color: #e68282;
+}
+
+.p{
+  font-size: 150%;
+}
+
+.container {
+  position: relative;
+  /* max-width: 800px;
+  margin: 0 auto; */
+  width: 90%;
+}
+
+.container img {vertical-align: middle;}
+
+.container .content {
+  position: absolute;
+  bottom: 0;
+  background-color: white;
+  color: black;
+  width: 100%;
+  padding: 10px;
+  left: 10%;
+  right: 10%;
+}
+
+input[type=text], input[type=password] {
+  width: 60%;
+  padding: 12px;
+  margin: 5px 0 25px 0;
+  display: block;
+  background: #f1f1f1;
+  /* text-align: justify; */
+  height: 200px;
+}
