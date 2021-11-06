@@ -1,147 +1,321 @@
+
 <!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        <link rel="stylesheet" href="libs/grid.css">
+        <link rel="stylesheet" type="text/css" href="../css/home.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+        <link rel="shortcut icon" href="../img/Chodocu.jpg"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta charset="utf-8">
+    </head>
+    
+    <body>
+      <nav >
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo"><a href="home.html">CHODOCU</a></label>
+        <ul class="nav_link" style="z-index:1">
+          <li><a href="product.html">TỔNG HỢP</a></li>
+          <li><a href="#">QUẦN ÁO</a></li>
+          <li><a href="#">PHỤ KIỆN</a></li>
+          <li><a href="#">TÚI XÁCH</a></li>
+          <li><a href="#">GIÀY DÉP</a></li>
+          
+          <li class="search-div">
+            <div class="search_bar">
+              <i class="fa fa-search"></i>
+              <input type="text" placeholder="Tìm kiếm..." />
+            </div>
+          </li>
+    
+          <li>
+            <button class="login-btn"><a href="login.html">LOGIN</a></button>
+          </li>
+          <li>
+            <a href="giohang.html"><i class="fas fa-shopping-bag"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-heart"></i></a>
+          </li>
+        </ul>
+    </nav>
+    
+      <div class="banner" style="width: 100%; height: 100%">
+        <div class="slideshow-container">
+    
+          <div class="mySlides fade">
+            <img src="img/slide2.jpg" style="width:100%">
+          </div>
+    
+          <div class="mySlides fade ">
+            <img src="img/slide3.jpg" style="width:100%">
+          </div>
 
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" type="text/css" href="css/cdc.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+          <div class="mySlides fade">
+            <img src="img/slide1.jpg" style="width:100%">
+          </div>
 
-</head>
-
-<body>
-  <nav >
-    <input type="checkbox" id="check">
-    <label for="check" class="checkbtn">
-      <i class="fas fa-bars"></i>
-    </label>
-    <label class="logo">CHODOCU</label>
-    <ul class="nav_link" style="z-index:1">
-      <li><a href="#">QUẦN ÁO</a></li>
-      <li><a href="#">PHỤ KIỆN</a></li>
-      <li><a href="#">TÚI XÁCH</a></li>
-      <li><a href="#">GIÀY DÉP</a></li>
-      <li class="search-div">
-        <div class="search_bar">
-          <i class="fa fa-search"></i>
-          <input type="text" placeholder="Tìm kiếm..." />
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
         </div>
-      </li>
-
-      <li>
-        <button class="login-btn">LOGIN</button>
-      </li>
-      <li>
-        <a href="#"><i class="fas fa-shopping-bag"></i></a>
-      </li>
-      <li>
-        <a href="#"><i class="fas fa-heart"></i></a>
-      </li>
-    </ul>
-  </nav>
-  <div class="banner" style="width: 100%; height: 100%">
-    <div class="slideshow-container">
-
-      <div class="mySlides fade">
-        <img src="/image/slide4.jfif" style="width:100%">
-      </div>
-
-      <div class="mySlides fade">
-        <img src="/image/slide2.jpg" style="width:100%">
-      </div>
-
-      <div class="mySlides fade ">
-        <img src="/image/slide3.jpg" style="width:100%">
-      </div>
-
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
     </div>
-
-
-  </div>
-  <br />
-  <script>
-    var slideIndex = 1;
-    showSlides(slideIndex);
-
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-    }
-
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-      var i;
-      var slides = document.getElementsByClassName("mySlides");
-      if (n > slides.length) { slideIndex = 1 }
-      if (n < 1) { slideIndex = slides.length }
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      slides[slideIndex - 1].style.display = "block";
-    }
-  </script>
-  <div class="grid-container">
-    <div class="grid-item">
-      <div class="cir" style="background-image: url(/image/item1.png)"></div>
-      <h3>Phần trên</h3>
-    </div>
-    <div class="grid-item">
-      <div class="cir" style="background-image: url(/image/item2.jfif)"></div>
-      <h3>Quần - Váy</h3>
-    </div>
-    <div class="grid-item">
-      <div class="cir" style="background-image: url(/image/item3.jpg)"></div>
-      <h3>Phụ kiện</h3>
-    </div>
-    <div class="grid-item">
-      <div class="cir" style="background-image: url(/image/item44.jfif)"></div>
-      <h3>Giày</h3>
-    </div>
-    <div class="grid-item">
-      <div class="cir" style="background-image: url(/image/item5.jpg)"></div>
-      <h3>Túi xách</h3>
-    </div>
-  </div>
-  </div>
-  <section style="
-      margin: auto;
-      width: 90vw;
-      height: 100%;
-    ">
-    <div class="grid-container-2">
-      <div class="item1">
-        <p style="font-size: 20px; color: white; font-style: italic">
-          Consequuntur magni dolores uam est, qui dolorem ipsum, consectetur,
-          adipisci velit, sed quia non numquam.
-        </p>
+      <br />
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+    
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+    
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+    
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          if (n > slides.length) { slideIndex = 1 }
+          if (n < 1) { slideIndex = slides.length }
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          slides[slideIndex - 1].style.display = "block";
+        }
+    </script>
+    <div class="grid-container">
+        <div class="grid-item">
+          <div class="cir" style="background-image: url(img/item1.png)"></div>
+          <h3>Phần trên</h3>
+        </div>
+        <div class="grid-item">
+          <div class="cir" style="background-image: url(img/item2.jfif)"></div>
+          <h3>Quần - Váy</h3>
+        </div>
+        <div class="grid-item">
+          <div class="cir" style="background-image: url(img/item3.jpg)"></div>
+          <h3>Phụ kiện</h3>
+        </div>
+        <div class="grid-item">
+          <div class="cir" style="background-image: url(img/item44.jfif)"></div>
+          <h3>Giày - Dép</h3>
+        </div>
+        <div class="grid-item">
+          <div class="cir" style="background-image: url(img/item5.jpg)"></div>
+          <h3>Túi xách</h3>
+        </div>
       </div>
-      <div class="item2">
-        <h4>Thanh lịch</h4>
-        <p>
-          Consequuntur magni dolores uam est, qui dolorem ipsum quia dolor sit
-          amet,magni dolores uam est
-        </p>
-        <a href="#" class="btnMore">Xem thêm</a>
-      </div>
-      <div class="item3">
-        <h4>Giá cả</h4>
-        <p>
-          Đến với CHODOCU cùng săn những món hàng hiếm, cổ điển với giá cả hợp lí.
-          Làm mới tủ đồ lẫn phong cách của bạn cùng CHODOCU.
-        </p>
-        <a href="#" class="btnMore">Xem thêm</a>
-      </div>
-      <div class="item4">
-        <h4>Ứng dụng</h4>
-        <p>
-          Consequuntur magni dolores uam est, qui dolorem ipsum quia dolor sit
-          amet,magni dolores uam est
-        </p>
-        <a href="#" class="btnMore">Xem thêm</a>
-      </div>
-    </div>
-  </section>
-</body>
+      <section style="
+          margin: auto;
+          width: 90vw;
+          height: 100%;
+        ">
+        <div class="grid-container-2">
+          <div class="item1">
+            <p style="color: white; font-style: italic">
+              Phụ nữ TỰ TIN làm nên LỊCH SỬ. Đừng đánh mất cơ hội của mình vì những lo ngại về bản thân.
+              Luôn nhớ PHẢI THẬT ĐẸP trong mọi lúc trò chuyện, hẹn hò, chụp ảnh và 8 tiếng làm việc cô gái nhé!
+            </p>
+          </div>
+          <div class="item2">
+            <h4>Thanh lịch</h4>
+            <p>
+              Hãy tự tạo niềm vui và hạnh phúc cho mình. Bạn sẽ thấy cuộc đời này rất đáng sống.
+              Ghé ngay CHODOCU để thử lên những item khiến mình xinh đẹp hơn bạn nhaaa
+            </p>
+            <a href="#" class="btnMore">Xem thêm</a>
+          </div>
+          <div class="item3">
+            <h4>Giá cả</h4>
+            <p>
+              Đến với CHODOCU cùng săn những món hàng hiếm, cổ điển với giá cả hợp lí.
+              Làm mới tủ đồ lẫn phong cách của bạn cùng CHODOCU.
+            </p>
+            <a href="#" class="btnMore">Xem thêm</a>
+          </div>
+          <div class="item4">
+            <h4>Cổ điển</h4>
+            <p>
+              Đừng chạy theo xu hướng. Đừng khiến bản thân lệ thuộc vào thời trang. 
+              Hãy để chính mình là người quyết định bản thân sẽ mặc gì cũng như sẽ sống ra sao
+            </p>
+            <a href="#" class="btnMore">Xem thêm</a>
+          </div>
+        </div>
+      </section>
+          
+          <div class="gioi_thieu_cho">
+            
+                <img src="img/hinh3.jpg">
+
+                <div class="noi_dung_1">
+                    <h2 id="h1">CHODOCU có gì ?</h2>
+                    <p id="p1"> &nbsp&nbsp CHODOCU luôn chắc lọc ra những kiểu dáng mới mẻ bắt kịp trending;<br>
+                    Chúng tôi sẽ đồng hành cùng bạn chọn ra những sản phẩm tuyệt vời nhất <br>và giao hàng đến tận tay các bạn!!!</p> 
+                </div>
+            
+                <img class="hinhanh" src="img/hinh2.jpg">
+
+                <div class="noi_dung_2">
+                    <h2 id="h2">Phong cách mới cho bạn</h2>
+                    <p id="p2">&nbsp&nbsp CHODOCU nhưng không cũ, nơi chứa những sản phẩm độc đáo,<br> phá cách nhất, các bạn sẽ là chính mình khi đến với CHODOCU.
+                    <br>Chúng tôi sẽ giúp bạn làm thực hiện điều đó!</p> 
+                </div>
+          </div>
+        
+        <div class="loi_nhan">
+            <div class="frame">
+                <div class="loi_nhan_1">
+                    <div class="logo">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 id="h3">Sin Sin</h3>
+                    <hr>
+                    <p id="cmt1">Đồ còn mới lắm ạ!</p>
+                </div>
+
+                <div class="loi_nhan_2">
+                    <div class="logo1">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 id="h4">Eun Hwa</h3>
+                    <hr>
+                    <p id="cmt2">Một trong những web bán quần áo resell tuyệt vời mà mình từng trải nghiệm.</p>
+                </div>
+
+                <div class="loi_nhan_3">
+                    <div class="logo2">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 id="h5">Ming Ming</h3>
+                    <hr>
+                    <p id="cmt3">Yomost, đồ mới và rất đẹp</p>
+                </div>
+
+                <div class="loi_nhan_4">
+                    <div class="logo3">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 id="h6">Aiki Si</h3>
+                    <hr>
+                    <p id="cmt4">Trang bán hàng tuyệt vời:></p>
+                </div>
+
+                <div class="loi_nhan_5">
+                    <div class="logo4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 id="h7">Hồng Anh</h3>
+                    <hr>
+                    <p id="cmt5">Tốn tiền quá ạ!</p>
+                </div>
+
+                <div class="loi_nhan_6">
+                    <div class="logo5">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 id="h8">Han</h3>
+                    <hr>
+                    <p id="cmt6">Tư vấn nhiệt tình, giao hàng nhanh</p>
+                </div>
+            </div>
+
+            <div class="chu_thich">
+                <p id="hh"> Đánh giá của <br> &nbsp khách hàng</p>
+                <p id="hp"> &nbsp Lời nhắn từ những khách hàng <br> đã sử dụng dịch vụ của CHODOCU</p>
+            </div>
+        
+        </div>
+
+        <div class="mail_form">
+            <div class="tham_gia">
+                <h2 id="tg">Tham gia vào CHODOCU</h2>
+                <p id="tg1">Đăng nhập để nhận được thêm những thông tin mới <br> cũng như những ưu đãi từ trang bạn nhé</p>
+            </div>
+            
+            <form class="f_mail" method="post" action="#" autocomplete="off">
+                <input type="text" placeholder="Nhập vào email của bạn" id="nhap_email" required>
+                <button id="dang_nhap">Đăng nhập</button>
+            </form>
+        </div>
+  
+    </body>
+    
+    <footer>
+        <div class="footer_page">
+            <div class="tieu_de row">
+                <div class="td1 col span-1-of-5"><a>Trợ giúp</a></div>
+                <div class="td2 col span-1-of-5"><a>Về chợ</a></div>
+                <div class="td3 col span-2-of-5"><a>Liên hệ</a></div>
+                <div class="td4 col span-1-of-5"><a>CHODOCU</a></div>
+                
+            </div>
+            <hr>
+            <div class="nd row">
+                <div class="nd1 col span-1-of-5">
+                    <a >Chính sách bảo mật</a>
+                    <a >Chính sách đổi trả</a>
+                    <a >Cách thức thanh toán</a>
+                    <a >Hướng dẫn mua hàng</a>
+                </div>
+                <div class="nd2 col span-1-of-5">
+                    <a class="tc">Trang chủ</a>
+                    <a class="story">Câu chuyện</a>
+                    <a class="mgh">Mở gian hàng</a>
+                </div>
+                <div class="nd3 col span-2-of-5">
+                    
+                    <a class="sdt"><i class="fas fa-phone-volume"></i> 0123456789</a>
+                    
+                    <a class="gmail"><i class="far fa-envelope"></i>chodocu@gmail.com</a>
+                    
+                    <a class="dia_chi"><i class="fas fa-map-marker-alt"></i> 222 An Khánh, Ninh Kiều, Cần Thơ</a>
+                </div>   
+                <div class="slogan_icon col span-1-of-5">
+                    <div>
+                        <a>Khơi nguồn sáng tạo thỏa sức mua hàng cùng CHODOCU</a>
+                        <a></a>
+                    </div>
+                    <a class="icons">
+                        <i class="fab fa-facebook-square"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-instagram-square"></i>
+                    </a>
+                </div>
+            </div>
+             
+
+        </div>
+    </footer>
+</html>
+
+
