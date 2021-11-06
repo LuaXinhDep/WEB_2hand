@@ -1,0 +1,631 @@
+:root {
+    --primary: #f3d9ca;
+    --secondary: #faf5f3;
+    --hover: #ccccff;
+    --typo: #433336;
+    --shade: 0 3px 10px rgb(0 0 0 / 0.2);
+    --h-nav: 60px;
+  }
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    /*color: black;*/
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+  }
+  body{
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+  }
+  nav li,
+  nav a {
+    text-decoration: none;
+    list-style: none;
+    color: black;
+  }
+  
+  nav {
+    display: fixed;
+    height: var(--h-nav);
+    width: 100%;
+    border-bottom: 1px solid black;
+  }
+  
+  nav label.logo{
+    margin-left: 40px;
+    font-size: 25px;
+    line-height: var(--h-nav);
+    cursor: pointer;
+    color: black;
+  }
+  nav ul {
+    float: right;
+  }
+ 
+  nav ul li {
+    display: inline-block;
+    line-height: var(--h-nav);
+    margin: 0 5px;
+  }
+  nav ul li a {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: black;
+    padding: 8px 10px;
+  }
+  
+  .nav_link a:active,
+  .nav_link a:hover {
+    color: var(--typo);
+    color: #b4aca9;
+  }
+  
+  
+  /*thanh tim kiem*/
+  .search_bar {
+    padding: 0px 10px;
+    width: 350px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    height: 45px;
+    border: 2px solid black;
+  }
+  .search_bar:focus {
+    background-color: var(--secondary);
+  }
+  .search_bar > i {
+    min-width: 40px;
+    text-align: center;
+  }
+  .search_bar > input {
+    flex: 1;
+    height: inherit;
+    border: none;
+    outline: none;
+    background-color: inherit;
+    font-size: 16px;
+  }
+  .checkbtn {
+    font-size: 28px;
+    float: right;
+    line-height: var(--h-nav);
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  #check {
+    display: none;
+  }
+  /*button login*/
+  button {
+    padding: 9px 25px;
+    border: 2px solid;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    background-color: inherit;
+  }
+  button:hover {
+    background-color: var(--primary);
+  }
+  
+  @media (max-width: 1090px) {
+    label.logo {
+      font-size: 28px;
+    }
+    nav ul li a {
+      font-size: 18px;
+    }
+    .checkbtn {
+      display: block;
+    }
+    nav ul {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: var(--secondary);
+  
+      text-align: center;
+      z-index: 0;
+      /* top: var(--h-nav);  */
+      left: -100%;
+      transition: all 0.4s;
+      box-shadow: var(--shade);
+    }
+    .search-div {
+      display: flex;
+      justify-content: center;
+    }
+    nav ul li a:i {
+      min-width: fit-content;
+    }
+    nav ul li a:active {
+      color: var(--typo);
+    }
+    #check:checked ~ ul {
+      left: 0;
+    }
+  }
+/*chuong trinh*/
+.chuong_trinh{
+    background-color: white;
+    text-align: center;
+    padding: 2% 0;
+}
+.chuong_trinh img{
+    width: 1250px;
+    height: 450px;
+}
+    /*Phần sản phẩm*/
+
+main{
+    margin:0;
+    background-color: #F3D9CA;
+    
+}
+main .clearfix:after{
+    clear: both;
+    content: "";
+    display: block;
+    width: 0px;
+    height: 0px;
+}
+
+main .muc_luc_1{
+    font-size: 18px;
+    padding-left: 30%;
+    padding-top: 2%;
+}
+
+main .bc, .ghbd, .ghcc{
+    margin-right: 7%;
+    padding: 0 2% 1% 2%;
+    cursor: pointer;
+}
+
+main .bc, .ghbd:hover{
+    border-bottom: 2px solid black;
+    padding: 0 2% 1% 2%;
+    margin-right: 7%;
+}
+
+
+main .ghcc:hover{
+    border-bottom: 2px solid black;
+    margin-right: 7%;
+    padding: 0 2% 1% 2%;
+} 
+
+main .hien_thi{
+    float: left;
+    margin-top: 50px;
+    font-size: 18px;
+    margin-left: 350px;
+    margin-bottom: 50px;
+}
+
+main .xem_them{
+    margin-right: 530px;
+    padding: 10px 20px 10px 20px;
+    cursor: pointer;
+    border: 1px solid gray;
+    border-radius: 10px;
+    background-color: rgb(247, 245, 245);
+    box-shadow: 0px 5px 5px 0px rgb(165, 162, 162);
+}
+
+main .xem_them:hover{
+    background-color: gray;
+    color: #fff;
+}
+main .page .left, .right{
+    /*padding: 0;*/
+    cursor: pointer;
+}
+
+main .mucluc{
+    float: left;
+    width: 20%;
+}
+
+main .muc_luc_2{
+    margin-top: 10%;
+    margin-left: 15%;
+}
+
+main .muc_luc_2 h3{
+    background-color: #fff;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 4%;
+    text-align: center;
+    box-shadow: 0px 10px 5px 0px rgb(165, 162, 162);
+}
+
+.kich_co{
+    padding: 15% 15% 5% 15%;
+}
+.kich_co div{
+    margin-bottom: 10%;
+}
+
+
+.size_s, .size_l{
+    float: right;
+    padding-right: 15%;
+}
+
+.size_xxl{
+    float: right;
+}
+
+ .mau_sac div{
+    padding: 5%;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 20px;
+}
+
+ .red:hover,
+.red:active{
+    border: 1px solid rgb(236, 99, 99);
+    background-color: rgb(247, 109, 109);
+    color:#fff;
+}
+
+
+.yellow:hover{
+    border: 1px solid rgb(236, 236, 117);
+    background-color: rgb(243, 243, 70);
+    color:#fff;
+}
+
+.orange:hover{
+    border: 1px solid rgb(243, 203, 130);
+    background-color: rgb(247, 192, 92);
+    color: #fff;
+}
+
+.green:hover{
+    border: 1px solid rgb(150, 241, 150);
+    background-color: rgb(27, 158, 27);
+    color: #fff;
+}
+
+.pink:hover{
+    border: 1px solid rgb(248, 149, 165);
+    background-color: rgb(245, 109, 132);
+    color: #fff;
+}
+
+.blue:hover{
+    border: 1px solid rgb(155, 155, 245);
+    background-color: rgb(142, 142, 252);
+    color: #fff;
+}
+
+.mau_sac .black:hover{
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+}
+
+.white:hover{
+    border: 1px solid white;
+    background-color: white;
+    /*color: black;*/
+}
+
+.purple:hover{
+    border: 1px solid rgb(245, 134, 245);
+    background-color: rgb(177, 25, 177);
+    color: #fff;
+}
+
+.silver:hover{
+    border: 1px solid silver;
+    background-color: silver;
+    color: #fff;
+}
+
+.brown:hover{
+    border: 1px solid brown;
+    background-color: brown;
+    color: #fff;
+}
+
+.gray:hover{
+    border: 1px solid gray;
+    background-color: gray;
+    color: #fff;
+}
+
+.all_sp h5, .chat_lieu h5{
+    padding: 5% 0 5% 20%;
+    margin-top: 8%;
+    cursor: pointer;
+}
+
+.all_sp h5:hover{
+    border: 1px solid gray;
+    border-radius: 20px;
+    background-color: gray;
+    color: #fff;
+    padding: 5% 0 5% 20%;
+    margin-top: 8%;
+}
+
+.chat_lieu h5:hover{
+    color: rgb(138, 132, 132);
+}
+
+    /*Hình ảnh*/
+
+.san-pham{
+    float: left; 
+    width: 18.7%;
+    background-color:rgb(247, 245, 245);
+    text-align: center;
+    border-radius: 15px;
+    border: 1px solid white;
+    margin-top: 50px;
+    margin-left: 80px;
+    box-shadow: 0px 5px 5px 0px rgb(165, 162, 162);
+    padding-bottom: 10px;
+}
+
+.san-pham img {
+    width: 100%;
+    height: 300px;
+    border-radius: 15px 15px 0px 0px;
+    cursor: pointer;
+}
+.san-pham h4{
+    margin: 2% 0%;
+}
+.san-pham a{
+    font-size: 15px;
+    margin-top: 2%;
+}
+.icon .heart{
+    margin-right: 30%;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.icon .shopping{
+    margin-left: 40%;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+/*Footer page*/
+footer{
+    background-color: #FAF5F3;
+    display: inline-block;
+    width: 100%;
+
+}
+.tieu_de{
+    font-weight: 600;
+    padding-right: 40px;
+}
+.tieu_de .td1 a{
+    padding-left: 60px;
+}
+
+.tieu_de .td2 a{
+    padding-left: 30px;
+}
+
+.tieu_de .td3 a{
+    padding-left: 50px;
+}
+
+.tieu_de .col{
+    margin-bottom: 0;
+}
+.td4{
+    text-align: right;
+    font-size: 25px;
+}
+.nd a{
+    display: block;
+    margin-bottom: 20px;
+}
+.nd i{
+    margin-right: 15px;
+}
+.nd1 a{
+    padding-left: 30px;
+}
+
+.nd2 a{
+    padding-left: 20px;
+}
+.footer_page{
+    padding: 80px 50px 60px 50px;
+ }
+ 
+ .icons{
+     margin-top: 20px;
+     font-size: 30px;
+ }
+
+ /*RESPONSIVE*/
+ 
+@media only screen and (max-width:1024px){
+     /*Phần sản phẩm*/
+
+.chuong_trinh img{
+    width: 95%;
+}
+
+main .muc_luc_1{
+    font-size: 15px;
+}
+
+main .bc, .ghbd, .ghcc{
+    margin-right: 3%;
+}
+
+main .hien_thi{
+    font-size: 15px;
+    margin-left: 250px;
+}
+
+main .xem_them{
+    margin-right: 340px;
+}
+
+main .muc_luc_2 h3{
+    font-size: 18px;
+}
+
+.kich_co{
+    padding: 15% 0% 5% 10%;
+}
+
+.size_xxl, .size_s, .size_l{
+    float: right;
+}
+
+.mau_sac{
+    font-size: 15px;
+}
+
+    /*Hình ảnh*/
+
+.san-pham{
+    width: 20%;
+    margin-top: 3%;
+    margin-left: 5%;
+    padding-bottom: 0;
+}
+
+.san-pham img{
+    height: 250px;
+}
+.san-pham h4{
+    font-size: 15px;
+}
+.san-pham a{
+    font-size: 13px;
+}
+.icon .heart, .icon .shopping{
+    font-size: 15px;
+}
+
+    /*Footer page*/
+  
+    .tieu_de{
+        font-weight: 550;
+        padding-right: 40px;
+        padding-bottom: 10px;
+    }
+    .tieu_de .td1 a{
+        padding-left: 40px;
+    }
+    
+    .tieu_de .td2 a{
+        padding-left: 40px;
+    }
+    
+    .tieu_de .td3 a{
+        padding-left: 50px;
+    }
+    
+    .tieu_de .col{
+        margin-bottom: 0;
+    }
+    .td4{
+        text-align: right;
+        font-size: 18px;
+    }
+    .nd a{
+        display: block;
+        margin-bottom: 20px;
+        font-size: 15px;
+    }
+    .nd i{
+        margin-right: 15px;
+    }
+    .nd1 a{
+        padding-left: 10px;
+    }
+    
+    .nd2 a{
+        padding-left: 20px;
+    }
+    .footer_page{
+        padding: 80px 50px 40px 50px;
+     }
+     
+    .slogan_icon .icons{
+      font-size: 25px;
+    }
+  }
+  
+  @media only screen and (max-width:768px){
+  /*Phần sản phẩm*/
+
+.chuong_trinh img{
+    width: 80%;
+}
+
+    /*Footer page*/
+  
+  .tieu_de a{
+      font-size: 13px;
+  }
+  .tieu_de .td1 a, .tieu_de .td2 a{
+      padding-left: 20px;
+  }
+  
+  .tieu_de .td3 a{
+      padding-left: 30px;
+  }
+  
+  .nd a{
+      margin-bottom: 8px;
+      font-size: 11px;
+  }
+  .nd i{
+      margin-right: 10px;
+  }
+  .nd1 a, .nd2 a{
+      padding-left: 10px;
+  }
+  
+  .footer_page{
+      padding: 60px 40px 40px 40px;
+   }
+   
+  .slogan_icon .icons{
+    font-size: 16px;
+  }
+    
+  }
+  
+  @media only screen and (max-width:425px){
+  
+    /*Footer page*/
+  
+  .nd3 #gmail, #dia_chi,
+  .tieu_de .td1, .td2, .td3, .nd1, .nd2,
+  .nd3{
+    display: none;
+  }
+  .slogan_icon{
+    margin-top: 15px;
+    margin-left: 20px;
+  }
+  
+  }
