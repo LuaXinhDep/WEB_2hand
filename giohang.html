@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Giỏ hàng</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="libs/grid.css">
+  <link rel="stylesheet" type="text/css" href="../css/giohang.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+  <link rel="shortcut icon" href="../img/Chodocu.jpg"/>
+	<meta charset="utf-8">
+</head>
+
+<body>
+  <nav >
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+      <i class="fas fa-bars"></i>
+    </label>
+    <label class="logo"><a href="home.html">CHODOCU</a></label>
+    <ul class="nav_link" style="z-index:1">
+      <li><a href="product.html">TỔNG HỢP</a></li>
+      <li><a href="#">QUẦN ÁO</a></li>
+      <li><a href="#">PHỤ KIỆN</a></li>
+      <li><a href="#">TÚI XÁCH</a></li>
+      <li><a href="#">GIÀY DÉP</a></li>
+      
+      <li class="search-div">
+        <div class="search_bar">
+          <i class="fa fa-search"></i>
+          <input type="text" placeholder="Tìm kiếm..." />
+        </div>
+      </li>
+
+      <li>
+        <button class="login-btn"><a href="login.html">LOGIN</a></button>
+      </li>
+      <li>
+        <a href="giohang.html"><i class="fas fa-shopping-bag"></i></a>
+      </li>
+      <li>
+        <a href="#"><i class="fas fa-heart"></i></a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="chodocu_xs">
+    <i><a>XEM SẢN PHẨM - CHỐT ĐƠN NGAY</a></i>
+  </div>
+<section class="cart row">
+  <div class="danh_muc_sp">
+    <table class="bang_1">
+      <tr>
+        <th>Sản phẩm</th>
+        <th>Tên sản phẩm</th>
+        <th>Size</th>
+        <th>Màu sắc</th>
+        <th>Số lượng</th>
+        <th>Giá</th>
+        <th>Xóa</th>
+      </tr>
+      <tr>
+        <td><img src="/img/item4.png"></td>
+        <td><p>Boot cá tính</p></td>
+        <td><p>37</p></td>
+        <td><p>Đen</p></td>
+        <td><input type="number" value="1" min="1" max="50"></td>
+        <td><p>550.000đ</p></td>
+        <td><button><b>X</b></button></td>
+      </tr>
+      <tr>
+        <td><img src="/img/item10.jpg"></td>
+        <td><p>Chân váy</p></td>
+        <td><p>S</p></td>
+        <td><p>Trắng</p></td>
+        <td><input type="number" value="1" min="1" max="50"></td>
+        <td><p>200.000đ</p></td>
+        <td><button><b>X</b></button></td>
+      </tr>
+      <tr>
+        <td><img src="/img/item11.jpg"></td>
+        <td><p>Đồng hồ</p></td>
+        <td><p>Freesize</p></td>
+        <td><p>Bạch kim</p></td>
+        <td><input type="number" value="1" min="1" max="50"></td>
+        <td><p>350.000đ</p></td>
+        <td><button><b>X</b></button></td>
+      </tr>
+      <tr>
+        <td><img src="/img/item12.jpg"></td>
+        <td><p>Áo thun mỹ</p></td>
+        <td><p>M</p></td>
+        <td><p>Trắng</p></td>
+        <td><input type="number" value="1" min="1" max="50"></td>
+        <td><p>150.000đ</p></td>
+        <td><button><b>X</b></button></td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="hoa_don">
+    <table class="bang_2">
+      <tr class="don_hang"><th colspan="2">ĐƠN HÀNG</th></tr>
+      <tr>
+        <td>TỔNG SẢN PHẨM</td>
+        <td><p>4</p></td>
+      </tr>
+      <tr>
+        <td>TẠM TÍNH</td>
+        <td><p>1.250.000đ</p></td>
+      </tr>
+      <tr>
+        <td>PHÍ VẬN CHUYỂN</td>
+        <td><p>30.000đ</p></td>
+      </tr>
+      <tr><td colspan="2" class="ship"><i style="font-size: 15px;">(Miễn phí ship đơn hàng trên <b>1.500.000đ</b>)</i></td></tr>
+      <tr>
+        <td><b>THÀNH TIỀN</b></td>
+        <td><p style="font-size: 15px;"><b>1.280.000đ</b></p></td>
+      </tr>
+      <tr>
+        <td>HÌNH THỨC THANH TOÁN</td>
+        <td>
+          <select>
+            <option>Thanh toán khi nhận hàng</option>
+            <option>Thẻ ngân hàng</option>
+            <option>Thẻ tín dụng</option>
+          </select>
+        </td>
+      </tr>
+    </table>
+
+    <div class="lua_chon">
+      <button class="mua_sam"><a href="product.html">TIẾP TỤC MUA SẮM</a></button>
+      <button class="dat_hang">ĐẶT HÀNG</button>
+      <h5>Hãy nhớ <a href="login.html">đăng nhập</a> vào CHODOCU nhé!!!</h5>
+    </div>
+      
+  </div>
+</section>
+</body>
+
+<footer>
+  <div class="footer_page">
+      <div class="tieu_de row">
+          <div class="td1 col span-1-of-5"><a>Trợ giúp</a></div>
+          <div class="td2 col span-1-of-5"><a>Về chợ</a></div>
+          <div class="td3 col span-2-of-5"><a>Liên hệ</a></div>
+          <div class="td4 col span-1-of-5"><a>CHODOCU</a></div>
+          
+      </div>
+      <hr>
+      <div class="nd row">
+          <div class="nd1 col span-1-of-5">
+              <a >Chính sách bảo mật</a>
+              <a >Chính sách đổi trả</a>
+              <a >Cách thức thanh toán</a>
+              <a >Hướng dẫn mua hàng</a>
+          </div>
+          <div class="nd2 col span-1-of-5">
+              <a class="tc">Trang chủ</a>
+              <a class="story">Câu chuyện</a>
+              <a class="mgh">Mở gian hàng</a>
+          </div>
+          <div class="nd3 col span-2-of-5">
+              
+              <a class="sdt"><i class="fas fa-phone-volume"></i> 0123456789</a>
+              
+              <a class="gmail"><i class="far fa-envelope"></i>chodocu@gmail.com</a>
+              
+              <a class="dia_chi"><i class="fas fa-map-marker-alt"></i> 222 An Khánh, Ninh Kiều, Cần Thơ</a>
+          </div>   
+          <div class="slogan_icon col span-1-of-5">
+              <div>
+                  <a>Khơi nguồn sáng tạo thỏa sức mua hàng cùng CHODOCU</a>
+                  <a></a>
+              </div>
+              <a class="icons">
+                  <i class="fab fa-facebook-square"></i>
+                  <i class="fab fa-twitter"></i>
+                  <i class="fab fa-instagram-square"></i>
+              </a>
+          </div>
+      </div>
+       
+
+  </div>
+</footer>
+</html>
