@@ -1,180 +1,128 @@
 <!DOCTYPE html>
 <html>
   <head> 
-    <title>CHODOCU</title>
+    <title>Tạo tài khoản</title>
+    <link rel="stylesheet" href="libs/grid.css">
+    <link rel="stylesheet" href="../css/signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <link rel="shortcut icon" href="../img/Chodocu.jpg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
-<style>
 
-body {
-font-family: Arial, Helvetica, sans-serif;}
-* {box-sizing: border-box}
-
-input[type=text], input[type=password] {
-  width: 300px;
-  border-radius: 12px;
-  padding: 12px;
-  margin: 5px 0 25px 0;
-  display: inline-block;
-  border: 12px;
-  background: #f1f1f1;
-  text-align: center;
-}
-
-
-input[type=text]:focus, input[type=password]:focus {
-  background-color: rgb(241, 209, 171);
-  outline: none;
-  text-align: center;
-}
-
-
-button {
-  background-color: #EB9F9F;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: 12px;
-  cursor: pointer;
-  width: 100%;
-  opacity: 0.9;
-  text-align: center;
-}
-
-button:hover {
-  opacity:1;
-  text-align: center;
-}
-
-
-.cancelbtn, .signupbtn {
-  float: center;
-  border-radius: 12px;
-  width: 50%;
-  text-align: center;
-}
-
-
-.container {
-  padding: 16px;
-  text-align: center;
-  width: 100%;
-}
-
-
-.modal {
-  display: block; 
-  position: fixed; 
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%; 
-  height: 100%;
-  overflow: auto;
-  background-color: #faf5fa;
-  padding-top: 50px;
-  text-align: center;
-}
-
-/* Modal Content/Box */
-.modal-content {
-  border-radius: 30px;
-  background-color: #ffffff;
-  margin: 5% auto 15% auto; 
-  border: 12px solid rgb(233, 178, 157);
-  width: 50%; 
-  text-align: center;
-}
-
-
-hr {
-  border: 1px solid #f1f1f1;
-  margin-bottom: 25px;
-  text-align: center;
-}
- 
-
-.close {
-  position: absolute;
-  right: 35px;
-  top: 15px;
-  font-size: 40%;
-  font-weight: bold;
-  color: #f1f1f1;
-  text-align: center;
-}
-
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
-  text-align: center;
-}
-
-
-
-@media screen and (max-width: 300px) {
-  .cancelbtn, .signupbtn {
-
-     width: 50%;
-     text-align: center;
-  }
-}
-</style>
 <body>
-<!-- 
-<h2>TẠO TÀI KHOẢN MỚI</h2>
-
-<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Đăng ký ngay</button> -->
-
-<div id="id01" class="modal">
-  <span onclick="document.getElementById('id01').style.display='block'" class="close" title="Close Modal">&times;</span>
-  <form class="modal-content" action="/action_page.php">
-    <div class="container">
-      <h1>TẠO TÀI KHOẢN</h1>
-      <p>Vui lòng điền vào biểu mẫu này để tạo tài khoản.</p>
-      <hr>
-
-      <label for="text"><b>Tên đăng nhập</b></label>
-      <div>
-      <input type="text" placeholder="Nhập tên" name="text" required>
-      </div>
-      <label for="email"><b>Email/Số điện thoại</b></label>
-      <div>
-      <input type="text" placeholder="Nhập địa chỉ Email/Số điện thoại" name="email" required>
-      </div>
-      <label for="psw"><b>Mật khẩu</b></label>
-      <div>
-      <input type="password" placeholder="Nhập mật khẩu" name="psw" required>
-      </div>
-      <label for="psw-repeat"><b>Xác nhận mật khẩu</b></label>
-      <div>
-      <input type="password" placeholder="Nhập lại mật khẩu" name="psw-repeat" required>
-      </div>
-      <label>
-        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Nhớ đăng nhập
+   <nav >
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
       </label>
+      <label class="logo"><a href="home.html">CHODOCU</a></label>
+      <ul class="nav_link" style="z-index:1">
+        <li><a href="product.html">TỔNG HỢP</a></li>
+        <li><a href="#">QUẦN ÁO</a></li>
+        <li><a href="#">PHỤ KIỆN</a></li>
+        <li><a href="#">TÚI XÁCH</a></li>
+        <li><a href="#">GIÀY DÉP</a></li>
+        
+        <li class="search-div">
+          <div class="search_bar">
+            <i class="fa fa-search"></i>
+            <input type="text" placeholder="Tìm kiếm..." />
+          </div>
+        </li>
 
-      <p>Vui lòng xác nhận lại bạn đã đọc và chấp nhận với <a href="#" style="color:dodgerblue">Điều khoản và Điều kiện</a>.</p>
+        <li>
+          <button class="login-btn"><a href="login.html">LOGIN</a></button>
+        </li>
+        <li>
+          <a href="#"><i class="fas fa-shopping-bag"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fas fa-heart"></i></a>
+        </li>
+      </ul>
+  </nav>
 
-      <div class="clearfix">
-        <!-- <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Hủy</button> -->
-        <button type="submit" class="signupbtn">Đăng ký</button>
+  <div class="modal">
+    <form class="modal-content" action="#" method="post" autocomplete="off">
+      <div class="container">
+        <h1>TẠO TÀI KHOẢN</h1>
+        <p>Vui lòng điền vào biểu mẫu này để tạo tài khoản.</p>
+        <hr>
+
+        <label for="text"><b>Tên đăng nhập</b></label>
+        <div>
+        <input type="text" placeholder="Nhập tên" name="text" required>
+        </div>
+        <label for="email"><b>Email/Số điện thoại</b></label>
+        <div>
+        <input type="text" placeholder="Nhập địa chỉ Email/Số điện thoại" name="email" required>
+        </div>
+        <label for="psw"><b>Mật khẩu</b></label>
+        <div>
+        <input type="password" placeholder="Nhập mật khẩu" name="psw" required>
+        </div>
+        <label for="psw-repeat"><b>Xác nhận mật khẩu</b></label>
+        <div>
+        <input type="password" placeholder="Nhập lại mật khẩu" name="psw-repeat" required>
+        </div>
+        <label>
+          <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Nhớ đăng nhập
+        </label>
+
+        <p>Vui lòng xác nhận lại bạn đã đọc và chấp nhận với <a href="#" style="color:dodgerblue">Điều khoản và Điều kiện</a>.</p>
+
+        <div class="clearfix">
+          <button type="submit" class="signupbtn">Đăng ký</button>
+        </div>
       </div>
+    </form>
+  </div>
+
+  </body>
+  <footer>
+    <div class="footer_page">
+        <div class="tieu_de row">
+            <div class="td1 col span-1-of-5"><a>Trợ giúp</a></div>
+            <div class="td2 col span-1-of-5"><a>Về chợ</a></div>
+            <div class="td3 col span-2-of-5"><a>Liên hệ</a></div>
+            <div class="td4 col span-1-of-5"><a>CHODOCU</a></div>
+            
+        </div>
+        <hr>
+        <div class="nd row">
+            <div class="nd1 col span-1-of-5">
+                <a >Chính sách bảo mật</a>
+                <a >Chính sách đổi trả</a>
+                <a >Cách thức thanh toán</a>
+                <a >Hướng dẫn mua hàng</a>
+            </div>
+            <div class="nd2 col span-1-of-5">
+                <a class="tc">Trang chủ</a>
+                <a class="story">Câu chuyện</a>
+                <a class="mgh">Mở gian hàng</a>
+            </div>
+            <div class="nd3 col span-2-of-5">
+                
+                <a class="sdt"><i class="fas fa-phone-volume"></i> 0123456789</a>
+                
+                <a class="gmail"><i class="far fa-envelope"></i>chodocu@gmail.com</a>
+                
+                <a class="dia_chi"><i class="fas fa-map-marker-alt"></i> 222 An Khánh, Ninh Kiều, Cần Thơ</a>
+            </div>   
+            <div class="slogan_icon col span-1-of-5">
+                <div>
+                    <a>Khơi nguồn sáng tạo thỏa sức mua hàng cùng CHODOCU</a>
+                    <a></a>
+                </div>
+                <a class="icons">
+                    <i class="fab fa-facebook-square"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram-square"></i>
+                </a>
+            </div>
+        </div>
+         
+
     </div>
-  </form>
-</div>
-
-<script>
-// Get the modal
-var modal = document.getElementById('id01');
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-</script>
-
-</body>
-</html>
+</footer>
+  </html>
