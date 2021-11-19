@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="css/AdminPage.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+  <script src="/script/jquery-3.6.0.js"></script>
+  <title>Sản Phẩm</title>
+
+</head>
+
+<body style="background-color: whitesmoke">
+  <div class="sidebar">
+    <div class="logo-content">
+      <div class="logo">
+        <b>CHODOCU</b>
+      </div>
+    </div>
+    <hr />
+    <ul class="menu-list">
+      <li class="menu-item">
+        <a href="/tongquan.html">
+          <i class="fas fa-home"></i>
+          <span class="item-name">Tổng quan</span>
+        </a>
+      </li>
+      <li class="menu-item">
+        <button class="btn-dropdown">
+          <i class="fas fa-file-invoice-dollar"></i>
+          Đơn hàng
+          <i class="fas fa-angle-right"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="#">Tạo đơn và giao hàng</a>
+          <a href="/donhang.html">Danh sách đơn hàng</a>
+          <a href="#">Khách trả hàng</a>
+        </div>
+      </li>
+      <li class="menu-item">
+        <button class="btn-dropdown">
+          <i class="fas fa-tshirt"> </i>
+          Sản phẩm
+          <i class="fas fa-angle-right"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="#">Danh mục sản phẩm</a>
+          <a href="#">Quản lý kho</a>
+          <a href="#">Nhập hàng</a>
+          <a href="#">Kiểm hàng</a>
+        </div>
+      </li>
+      <li class="menu-item">
+        <button class="btn-dropdown">
+          <i class="fas fa-user"></i>
+          Khách hàng
+          <i class="fas fa-angle-right"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="#">Danh mục khách hàng</a>
+          <a href="#">Nhóm khách hàng</a>
+        </div>
+      </li>
+      <li class="menu-item">
+        <a href="#">
+          <i class="fas fa-shipping-fast"></i>
+          <span class="item-name">Vận chuyển</span>
+        </a>
+      </li>
+
+      <hr />
+      <li class="menu-item">
+        <a href="#">
+          <i class="fas fa-cog"></i>
+          <span class="item-name">Cấu hình</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <main class="main-page">
+    <div class="nav-bar">
+      <button type="button" class="btn-bars">
+        <span class="fas fa-bars" style="vertical-align: middle"></span>
+      </button>
+      <p style="flex-grow: 1; text-indent: 20px; font-size: 20px">Sản phẩm</p>
+      <div class="avatar-div">
+        <img src="/image/admin.png" alt="avatar-user" style="width: 40px; height: 40px; border-radius: 50%" />
+      </div>
+    </div>
+    <div class="filter-area">
+      <div class="filter-below">
+        <div class="search-div" style="flex-grow: 1">
+          <div class="search_bar s-custom">
+            <i class="fa fa-search"></i>
+            <input type="text" placeholder="Tìm kiếm bằng mã sản phẩm, tên sản phẩm,..." />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="
+          display: flex;
+          flex-direction: column;
+          width: 95%;
+          margin: 20px auto;
+        ">
+      <div class="filter-item" style="display: flex;">
+        <button class="create-product">
+          Thêm sản phẩm
+        </button>
+        <div style="display: flex; flex-direction: row;">
+          <div > 
+            <button class="btn opt-filter">
+              Trạng thái
+              <i class="fas fa-caret-down"></i>
+            </button>
+            <ul class="option-list opt-tt-list">
+              <li><button>Còn hàng</button></li>
+              <li><button>Hết hàng</button></li>
+            </ul>
+          </div>
+          <div>
+            <button class="btn opt-filter">
+              Ngày tạo
+              <i class="fas fa-caret-down"></i>
+            </button>
+            <ul class="option-list">
+              <li><button>Hôm nay</button></li>
+              <li><button>Hôm qua</button></li>
+              <li><button>Trong tuần</button></li>
+              <li><button>Trong tháng</button></li>
+              <li><button>Tùy chọn khác</button></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+      <!-- form tạo sản phẩm mới -->
+      <div id="frm-taosp" style="display:none">
+
+        <label for="ma-sp">Mã Sản Phẩm</label>
+        <input type="text" class="form-control" id="msp" placeholder="Mã sản phẩm" required />
+
+        <label for="ten-sp">Tên Sản Phẩm</label>
+        <input type="text" class="form-control" id="tsp" placeholder="Tên sản phẩm" required />
+
+        <label for="gia-sp">Giá </label>
+        <input type="text" class="form-control" id="gsp" placeholder="Giá sản phẩm" required />
+
+        <button class="btn btn-primary" id="add-row">Tạo sản phẩm</button>
+      </div>
+    </div>
+
+    <table class="table-sanpham bill-table">
+      <thead>
+        <tr>
+          <th>
+            <input class="check-ctrl" onclick="CheckAll()" type="checkbox" />
+          </th>
+          <th>Mã sản phẩm</th>
+          <th>Tên sản phẩm</th>
+          <th>Giá</th>
+          <th>Trạng thái</th>
+          <th>Thao tác</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background-color: #fafafa">
+          <th><input name="chk" type="checkbox" /></th>
+          <td class="ma-san-pham">N001</td>
+          <td>Quần váy</td>
+          <td>500.000</td>
+          <td class="status-bill-order">Còn hàng</td>
+          <td>
+            <button class="btn-act btn-edit">
+              <i class="fas fa-pen"></i>
+            </button>
+            <button class="btn-act btn-delete">
+              <i class="fas fa-trash-alt"></i>
+            </button>
+          </td>
+        </tr>
+        <tr style="font-size: 16px">
+          <th><input name="chk" type="checkbox" /></th>
+          <td class="ma-san-pham">N002</td>
+          <td>Jacket</td>
+          <td>300.000</td>
+          <td class="sold-out">Hết hàng</td>
+          <td>
+            <button class="btn-act btn-edit">
+              <i class="fas fa-pen"></i>
+            </button>
+            <button class="btn-act btn-delete">
+              <i class="fas fa-trash-alt"></i>
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <th><input name="chk" type="checkbox" /></th>
+          <td class="ma-san-pham">N002</td>
+          <td>Boost</td>
+          <td>400.000</td>
+          <td class="status-bill-order">Còn hàng</td>
+          <td>
+            <button class="btn-act btn-edit">
+              <i class="fas fa-pen"></i>
+            </button>
+            <button class="btn-act btn-delete">
+              <i class="fas fa-trash-alt"></i>
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <th><input name="chk" type="checkbox" /></th>
+          <td class="ma-san-pham">N003</td>
+          <td>Túi đeo chéo</td>
+          <td>100.000</td>
+          <td class="status-bill-order">Còn hàng</td>
+          <td>
+            <button class="btn-act btn-edit">
+              <i class="fas fa-pen"></i>
+            </button>
+            <button class="btn-act btn-delete">
+              <i class="fas fa-trash-alt"></i>
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <th><input name="chk" type="checkbox" /></th>
+          <td class="ma-san-pham">N004</td>
+          <td>Hoa tai</td>
+          <td>70.000</td>
+          <td class="status-bill-order">Còn hàng</td>
+          <td>
+            <button class="btn-act btn-edit">
+              <i class="fas fa-pen"></i>
+            </button>
+            <button class="btn-act btn-delete">
+              <i class="fas fa-trash-alt"></i>
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <th><input name="chk" type="checkbox" /></th>
+          <td class="ma-san-pham">N005</td>
+          <td>Vòng cổ</td>
+          <td>250.000</td>
+          <td class="sold-out">Hết hàng</td>
+          <td>
+            <button class="btn-act btn-edit">
+              <i class="fas fa-pen"></i>
+            </button>
+            <button class="btn-act btn-delete">
+              <i class="fas fa-trash-alt"></i>
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <th><input name="chk" type="checkbox" /></th>
+          <td class="ma-san-pham">N006</td>
+          <td>Khoác da</td>
+          <td>300.000</td>
+          <td class="status-bill-order">Còn hàng</td>
+          <td>
+            <button class="btn-act btn-edit">
+              <i class="fas fa-pen"></i>
+            </button>
+            <button class="btn-act btn-delete">
+              <i class="fas fa-trash-alt"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+  <script src="/script/AdminPage.js">
+    import CheckAll from './script/AdminPage.js';
+    import Add from './script/AdminPage.js';
+  </script>
+</body>
+
+</html>
