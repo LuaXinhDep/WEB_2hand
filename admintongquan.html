@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="css/AdminPage.css" />
+  <script src="/script/jquery-3.6.0.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+</head>
+
+<body style="background-color: whitesmoke;">
+  <div class="sidebar">
+    <div class="logo-content">
+      <div class="logo">
+        <b>CHODOCU</b>
+      </div>
+    </div>
+    <hr />
+    <ul class="menu-list">
+      <li class="menu-item">
+        <a href="/tongquan.html">
+          <i class="fas fa-home"></i>
+          <span class="item-name" >Tổng quan</span>
+        </a>
+      </li>
+      <li class="menu-item">
+        <button class="btn-dropdown">
+          <i class="fas fa-file-invoice-dollar"></i>
+          Đơn hàng
+          <i class="fas fa-angle-right"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="#">Tạo đơn và giao hàng</a>
+          <a href="/donhang.html">Danh sách đơn hàng</a>
+          <a href="#">Khách trả hàng</a>
+        </div>
+      </li>
+      <li class="menu-item">
+        <button class="btn-dropdown">
+          <i class="fas fa-tshirt"> </i>
+          Sản phẩm
+          <i class="fas fa-angle-right"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="/sanpham.html">Danh mục sản phẩm</a>
+          <a href="#">Quản lý kho</a>
+          <a href="#">Nhập hàng</a>
+          <a href="#">Kiểm hàng</a>
+        </div>
+      </li>
+      <li class="menu-item">
+        <button class="btn-dropdown">
+          <i class="fas fa-user"></i>
+          Khách hàng
+          <i class="fas fa-angle-right"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="#">Danh mục khách hàng</a>
+          <a href="#">Nhóm khách hàng</a>
+        </div>
+      </li>
+      <li class="menu-item">
+        <a href="#">
+          <i class="fas fa-shipping-fast"></i>
+          <span class="item-name">Vận chuyển</span>
+        </a>
+      </li>
+
+      <hr>
+      <li class="menu-item">
+        <a href="#">
+          <i class="fas fa-cog"></i>
+          <span class="item-name">Cấu hình</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <main class="main-page">
+    <div class="nav-bar">
+      <button type="button" class="btn-bars">
+        <span class="fas fa-bars" style=" vertical-align: middle;"></span>
+      </button>
+      <p style="flex-grow: 1;text-indent: 20px;font-size: 20px;">Tổng quan</p>
+      <div class="avatar-div">
+        <img src="/image/admin.png" alt="avatar-user" style="width: 40px; height: 40px; border-radius: 50%" />
+      </div>
+    </div>
+    <div class="statistic-container">
+      <div class="statistic-item">
+        <div class="item-header">
+          <span style="text-align: start;">KẾT QUẢ KINH DOANH TRONG NGÀY</span>
+        </div>
+      </div>
+      <div class="statistic-item">
+        <i class="fas fa-dollar-sign" style="background-color: #00a8e8;"></i>
+        <div class="item-header">
+          <span>Doanh Thu</span>
+          <p style="color: #00a8e8;">9,000,000</p>
+        </div>
+      </div>
+
+      <div class="statistic-item">
+        <i class="fas fa-file-invoice-dollar" style="background-color: #06d6a0;"></i>
+        <div class="item-header">
+          <span>Đơn hàng mới</span>
+          <p style="color: #06d6a0;">20</p>
+
+        </div>
+      </div>
+      
+
+      <div class="statistic-item">
+        <i class="fas fa-tshirt" style="background-color: #ffd166;"> </i>
+        <div class="item-header">
+          <span>Sản phẩm</span>
+          <p style="color: #ffd166;">122</p>
+        </div>
+      </div>
+
+      <div class="statistic-item">
+        <i class="far fa-calendar-times" style="background-color: #ff6b6b;"></i>
+        <div class="item-header">
+          <span>Đơn hủy</span>
+          <p style="color: #ff6b6b;">2</p>
+        </div>
+      </div>
+    </div>
+    <section>
+      <table class="bill-table">
+        <tr style="height: 70px;">
+          <td class="table-name" colspan="5">ĐƠN HÀNG MỚI</td>
+        </tr>
+        <tr>
+          <th><input class="check-ctrl" onclick="CheckAll()" type="checkbox" /></th>
+          <th>Mã đơn hàng</th>
+          <th>Ngày tạo đơn</th>
+          <th>Tên khách hàng</th>
+          <th>Tổng hóa đơn</th>
+          <th>Trạng thái</th>
+        </tr>
+        <tr>
+          <th><input name="chk" type="checkbox" /></th>
+          <td><a href="#">N001</a></td>
+          <td>19/10/2021</td>
+          <td>Ngân Hà</td>
+          <td>500.000</td>
+          <td class="status-bill-order">Đặt hàng</td>
+        </tr>
+        <tr>
+          <th><input name="chk" type="checkbox" /></th>
+          <td><a href="#">N002</a></td>
+          <td>19/10/2021</td>
+          <td>Lê Bảo</td>
+          <td>300.000</td>
+          <td class="status-bill-delivery">Đang giao</td>
+        </tr>
+        <tr>
+          <th><input name="chk" type="checkbox" /></th>
+          <td><a href="#">N002</a></td>
+          <td>19/10/2021</td>
+          <td>Nguyên Thạnh</td>
+          <td>400.000</td>
+          <td class="status-bill-order">Đặt hàng</td>
+        </tr>
+        <tr>
+          <th><input name="chk" type="checkbox" /></th>
+          <td><a href="#">N003</a></td>
+          <td>19/10/2021</td>
+          <td>Trần Tú</td>
+          <td>500.000</td>
+          <td class="status-bill-done">Hoàn thành</td>
+        </tr>
+        <tr>
+          <th><input name="chk" type="checkbox" /></th>
+          <td><a href="#">N004</a></td>
+          <td>19/10/2021</td>
+          <td>Hoa Hè</td>
+          <td>100.000</td>
+          <td class="status-bill-order">Đặt hàng</td>
+        </tr>
+        <tr>
+          <th><input name="chk" type="checkbox" /></th>
+          <td><a href="#">N005</a></td>
+          <td>19/10/2021</td>
+          <td>Bảo Anh</td>
+          <td>250.000</td>
+          <td class="status-bill-cancel">Đã hủy</td>
+        </tr>
+        <tr>
+          <th><input name="chk" type="checkbox" /></th>
+          <td><a href="#">N006</a></td>
+          <td>19/10/2021</td>
+          <td>Bảo Vy</td>
+          <td>200.000</td>
+          <td class="status-bill-order">Đặt hàng</td>
+        </tr>
+      </table>
+    </section>
+  </main>
+  <script src="/script/AdminPage.js">
+    import CheckAll from './script/AdminPage.js';
+    import clickOpenOrClose from './scripts/AdminPage.js';
+  </script>
+</body>
