@@ -1,0 +1,491 @@
+:root {
+  --primary: #f3d9ca;
+  --secondary: #faf5f3;
+  --hover-table: ghostwhite;
+  --shade: 0 3px 10px rgb(0 0 0 / 0.2);
+  --h-nav: 60px;
+  --sidebar-width: 0px;
+  --sbbgColor: #0a9396;
+  --sbColor: whitesmoke;
+}
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+li,
+a {
+  /*text-decoration: none; */
+  list-style: none;
+}
+i {
+  width: 35px;
+  text-align: center;
+}
+.sidebar {
+  height: 100%;
+  width: var(--sidebar-width);
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: var(--sbbgColor);
+  overflow-x: hidden;
+  color: var(--sbColor);
+}
+a:active {
+  color: gray;
+}
+.sidebar a,
+.btn-dropdown {
+  color: var(--sbColor);
+  padding: 6px 8px 6px 8px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+/* logo and Admin Dashboard */
+.logo-content .logo {
+  text-align: center;
+  line-height: 50px;
+  font-size: 28px;
+}
+.logo-content .logo i {
+  padding: 0px 10px;
+  line-height: 50px;
+}
+.logo-content i {
+  float: right;
+}
+/* menu - list */
+.fa-chevron-down {
+  float: right;
+}
+.fa-angle-right {
+  float: right;
+}
+.fa-angle-down {
+  float: right;
+}
+
+.dropdown-container {
+  display: none;
+}
+
+.dropdown-container a {
+  font-size: 15px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding-left: 35px;
+}
+
+/* Menu Item */
+.item-name {
+  font-size: 16px;
+}
+.sidebar .menu-item i {
+  padding: 10px 0px;
+  font-size: 16px;
+}
+
+.sidebar .menu-item:hover,
+.dropdown-container a:hover {
+  color: #e9d8a6;
+}
+
+.menu-item a:active {
+  color: #005f73;
+}
+/* mainpage */
+.main-page {
+  margin-left: var(--sidebar-width);
+}
+.nav-bar {
+  height: 50px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.btn-bars {
+  width: 45px;
+  height: 45px;
+  margin-left: 5px;
+  border: none;
+  border-radius: 50%;
+  background-color: white;
+}
+.btn-bars:hover {
+  background: whitesmoke;
+  cursor: pointer;
+}
+.fa-bars {
+  font-size: 19px;
+  text-align: center;
+}
+/* thanh tim kiem */
+.search_bar {
+  padding: 0px 10px;
+  width: 350px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  height: 45px;
+  border: 2px solid black;
+}
+.search_bar:focus {
+  background-color: var(--secondary);
+}
+.search_bar > i {
+  min-width: 40px;
+  text-align: center;
+}
+.search_bar > input {
+  flex: 1;
+  height: inherit;
+  border: none;
+  outline: none;
+  background-color: inherit;
+  font-size: 16px;
+}
+
+/* avatar admin */
+.avatar-div {
+  display: flex;
+  align-items: center;
+  margin: 0px 15px;
+}
+
+.statistic-container {
+  margin: 20px auto;
+  width: 95%;
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: 60px 120px;
+  background-color: white;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.statistic-item:first-child {
+  grid-column: 1/5;
+  border-bottom: 2px solid whitesmoke;
+}
+.statistic-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.statistic-item:not(:first-child):hover {
+  background-color: ghostwhite;
+}
+.item-header {
+  text-align: center;
+  font-size: 20px;
+}
+.item-header p {
+  font-size: 21px;
+  margin-top: 3px;
+}
+.statistic-item i {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: yellowgreen;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  font-size: 20px;
+  color: white;
+}
+
+/* table-bill */
+.bill-table {
+  border-collapse: collapse;
+  width: 95%;
+  margin: 20px auto;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.table-name {
+  text-indent: 15px;
+  font-size: 20px;
+}
+
+.btn-option {
+  background-color: #fbfbfb;
+  border: 1px solid gainsboro;
+  color: black;
+  padding: 10px 12px 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.option-list {
+  margin-top: 3px;
+  border: 1px solid gainsboro;
+  border-radius: 8px;
+  color: black;
+  display: none;
+  background-color: white;
+  position: absolute;
+  min-width: 140px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 5px;
+  z-index: 1;
+}
+.option-list li button {
+  cursor: pointer;
+  padding: 10px 20px;
+  width: 152px;
+  background-color: white;
+  border: none;
+  margin: 1px auto;
+  border-radius: 6px;
+}
+.option-list li button:hover {
+  background-color: ghostwhite;
+}
+tr {
+  height: 60px;
+  font-size: 16px;
+}
+
+th,
+td {
+  text-align: left;
+}
+tr {
+  border: 1px solid whitesmoke;
+}
+tr:nth-child(odd) {
+  background-color: #fafafa;
+}
+tr:first-child {
+  background-color: white;
+}
+tr:nth-child(2) {
+  background-color: white;
+  font-size: 18px;
+}
+th:first-child {
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+}
+tr:not(:nth-child(2)):hover {
+  background-color: #caf0f8;
+}
+tr:first-child:hover {
+  background-color: white;
+}
+.status-bill-order {
+  color: #4cc9f0;
+}
+.status-bill-cancel {
+  color: #f28482;
+}
+.status-bill-delivery {
+  color: #ff7f51;
+}
+.status-bill-done {
+  color: #7fc0aa;
+}
+
+/* DANH SÁCH ĐƠN HÀNG */
+.filter-area {
+  margin: 20px auto;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+}
+.btn {
+  background-color: #fbfbfb;
+  border: 1px solid gray;
+  padding: 10px 12px 10px 28px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+}
+.btn {
+  margin-left: 5px;
+}
+.create-product {
+  border: 1px solid gray;
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #4cc9f0;
+  color: white;
+}
+.export-file {
+  display: flex;
+  margin-left: 5px;
+  color: #4cc9f0;
+}
+.filter-below {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5px;
+}
+
+.s-custom {
+  width: 100%;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  border: 1px solid gray;
+  height: 41px;
+}
+
+/* select dropdown option */
+.select-option option {
+  padding: 20px;
+  color: #4cc9f0;
+  height: 50px;
+}
+.tag-input {
+  height: 40px;
+  border-collapse: collapse;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+/* Add, Modify and Delete on data table */
+
+.btn-act {
+  height: 40px;
+  width: 40px;
+  border-radius: 5px;
+  border: 1px solid white;
+  cursor: pointer;
+}
+.btn-edit {
+  background-color: var(--sbbgColor);
+}
+.btn-delete {
+  background-color: #9b2226;
+}
+.fa-pen {
+  color: white;
+}
+.fa-trash-alt {
+  color: white;
+}
+.sold-out {
+  color: #ff7f51;
+}
+
+@media (max-width: 768px) {
+  .filter-below {
+    flex-direction: column;
+  }
+  .create-product {
+    padding: 10px 10px;
+  }
+  .opt-filter {
+    padding: 10px 0px 10px 8px;
+  }
+  .opt-filter i {
+    width: 20px;
+  }
+  .statistic-container {
+    grid-template-columns: repeat(2, 50%) ;
+    grid-template-rows: 60px 120px 120px;
+  }
+  .statistic-item:first-child {
+    grid-column: 1/3;
+    margin-right: 10px ;
+  }
+}
+
+
+@media (max-width: 426px) {
+  .filter-item {
+    flex-direction: column-reverse;
+  }
+  .filter-item div {
+    margin-bottom: 5px;
+  }
+  .btn {
+    margin-left: 0px;
+  }
+  .opt-filter:nth-child(1) {
+    margin-left: 5px;
+  }
+  th,td {
+    text-align: center;
+    font-size: 15px;
+  }
+  th:first-child {
+    width: 30px;
+  }
+  .btn-act {
+    height: 20px;
+    width: 20px;
+    border-radius: 5px;
+  }
+  .btn-act i{
+    width: inherit;
+    font-size: 10px;
+  }
+ 
+}
+/* form tạo sản phẩm */
+#frm-taosp {
+  margin-top: 20px;
+  width: 95%;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  background: white;
+}
+#frm-taosp label {
+  margin: 15px 0px 10px;
+  font-size: 20px;
+  width: 150px;
+}
+#msp,
+#tsp,
+#gsp {
+  height: 50px;
+  font-size: 16px;
+  border-radius: 8px;
+  padding: 5px 10px;
+}
+
+#frm-taosp button {
+  margin: 15px 0px;
+  background: var(--primary);
+}
